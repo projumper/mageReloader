@@ -47,9 +47,8 @@ read -p "should i flush cache and reindex ? (y/n)? " answer
         ;;
  esac
 
-
-#php bin/magento setup:static-content:deploy en_US
-#php bin/magento setup:static-content:deploy en_GB
+ 
+php bin/magento setup:static-content:deploy de_DE && php bin/magento setup:static-content:deploy en_US && php bin/magento setup:static-content:deploy en_GB
 
 echo "diasable maintenance mode"
 php bin/magento maintenance:disable
